@@ -39,3 +39,16 @@ int qp_multi(int x, int i, int m){
 
     return ((hash_multi(x, m) + (c1*i) + (c2*i*i)) % m);
 }
+
+
+/*  double hashing functions */
+
+//  division method hashing
+int dh_div(int x, int i, int m){
+    return ((hash_div(x, m) + hash_div(x, m-1)) % m);
+}
+
+//  multiplication method hashing
+int dh_multi(int x, int i, int m){
+    return ((hash_multi(x, m) + hash_multi(x, m-1)) % m);
+}

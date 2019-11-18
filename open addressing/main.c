@@ -17,6 +17,7 @@ int main(int argc, char const *argv[])
         printf("Select Collision probing type");
         printf("\n1. Linear probing method");
         printf("\n2. Quadratic probing method");
+        printf("\n3. Double hashing method");
         printf("\n0. EXIT");
 
         printf("\nEnter choice: ");
@@ -25,7 +26,7 @@ int main(int argc, char const *argv[])
 
         if(ch == 0)
             exit(0);
-        else if(ch == 1 || ch == 2){
+        else if((ch == 1 || ch == 2) && (ch2 == 1 || ch == 2 || ch == 3)){
             while(1){
                 printf("\nHASHING MENU");
                 printf("\n1. Initialise Hash table");
@@ -55,12 +56,16 @@ int main(int argc, char const *argv[])
                                 ht = insert_hash_div_lp(ht, data);
                             else if(ch2 == 2)
                                 ht = insert_hash_div_qp(ht, data);
+                            else if(ch2 == 3)
+                                ht = insert_hash_div_dh(ht, data);
                         }
                         else if(ch == 2){
                             if(ch2 == 1)
                                 ht = insert_hash_multi_lp(ht, data);
                             else if(ch2 == 2)
                                 ht = insert_hash_multi_qp(ht, data);
+                            else if(ch2 == 3)
+                                ht = insert_hash_multi_dh(ht, data);
                         }
                         break;
 
