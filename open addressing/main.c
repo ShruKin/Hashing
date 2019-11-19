@@ -26,6 +26,8 @@ int main(int argc, char const *argv[])
 
         if(ch == 0)
             exit(0);
+        else if(ch2 == 0)
+            exit(0);
         else if((ch == 1 || ch == 2) && (ch2 == 1 || ch == 2 || ch == 3)){
             while(1){
                 printf("\nHASHING MENU");
@@ -33,7 +35,7 @@ int main(int argc, char const *argv[])
                 printf("\n2. Insert");
                 printf("\n3. Print");
                 printf("\n4. Search");
-                printf("\n0. EXIT to main menu");
+                printf("\n0. EXIT");
 
                 printf("\nEnter choice: ");
                 scanf("%d", &ch3);
